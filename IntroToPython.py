@@ -149,3 +149,91 @@ print(student)
 
 # count the key value pairs 
 print(len(student))
+
+
+
+
+# conditionals
+x = 14
+if x < 0: 
+  print("Negative")
+elif x == 0:
+  print("zero")
+else: 
+  print("Positive")
+
+# we also have while and for loops 
+count = 0 
+while count < 5:
+  print(count)
+  count += 1
+
+
+# for in loop is similar to the for loop in JS, but easier to use
+for i in range(5):
+  print(i)
+
+
+animals = ["lions", "tigers", "bears"]
+
+for animal in animals: 
+  print(animal)
+
+count = 0 
+while count < 5:
+  print(count, "is less than 5")
+  count += 1
+else: 
+  print(count, "is not less than 5")
+
+
+count = 15 
+for i in range(i, count):
+  print(i)
+else: 
+  print("done")
+
+
+# print out the keys and values of the student dictionary from above
+for key in student:
+  print(f"{key} = {student[key]}")
+
+
+
+#Functions 
+# example function returning string interpolation of parameters
+def function_example(param_one, param_two):
+  concat = f"what a splendid function! I've got my {param_one} and {param_two}."
+  return print(concat)
+
+function_example("potato", "tomato")
+
+
+
+
+# =========================
+# Fizzbuzz problem 
+
+"""
+Fizzbuzz is a classic, easy whiteboard problem in interviews. Remarkably, many hiring managers report that a majority of their applicants cannot solve it.
+
+You write a function that will count from 1-99 printing 1 of four things for each number. If the number is divisible by 3, print "fizz". If the number is divisible by 5, print "buzz". If the number is divisible by 3 and 5, print "fizzbuzz". And otherwise, just print the number.
+"""
+
+
+# plan is to use the % operator to get the remainder of the division 
+def fizzbuzz ():
+  # range from 1-100
+  for i in range(1,100):
+    # need to test of the number is divisible by 3 and 5 first
+    # KEY - you want to get the most wide range condition first and then move to the more specific
+    if i % 3 == 0 and  i % 5 == 0:
+      print ("fizzbuzz")
+    elif i % 3 == 0: 
+      print("fizz")
+    elif i % 5 == 0: 
+      print("buzz")
+    else: 
+      print(i)
+
+fizzbuzz()
